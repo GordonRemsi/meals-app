@@ -1,0 +1,57 @@
+Note:
+    1.  Buttons are same function but shorter
+    2.  This method will not navigate to the same page over like push
+
+<Button
+    title="Go to Meals"
+    onPress={() => {props.navigation.navigate({routeName: 'CategoryMeals'})}}
+/>
+
+<Button
+    title="Go to Meals"
+    onPress={() => {props.navigation.navigate('CategoryMeals')}}
+/>
+
+<=====================================================================================================================================================================================>
+
+Note:
+    1.  Different from navigate
+    2.  This method allows you to navigate to the same page again and allows you to keep information on previous same page
+    3.  Something useful would be "Dropbox" so you dont lose pre-written content
+
+<Button
+    title="Go to Meals"
+    onPress={() => {props.navigation.push('CategoryMeals')}}
+/>
+
+<=====================================================================================================================================================================================>
+
+Note:
+    1.  This method allows you to go back to previous page or pops off the current page
+    2.  popToTop brings you back to root page which is first page in stack
+
+<Button
+    title="Go to Meals"
+    onPress={() => {props.navigation.goBack()}}
+/>
+
+<Button
+    title="Go to Meals"
+    onPress={() => {props.navigation.pop()}}
+/>
+
+<Button
+    title="Go to Meals"
+    onPress={() => {props.navigation.popToTop()}}
+/>
+
+<=====================================================================================================================================================================================>
+
+Note:
+    1.  This method replaces the current screen youre on to another screen without back button because stack is empty
+    2.  Something useful would be "Login Page" to Homepage so you cant go back to login unless logout
+
+<Button
+    title="Go to Meals"
+    onPress={() => {props.navigation.replace('CategoryMeals')}}
+/>
